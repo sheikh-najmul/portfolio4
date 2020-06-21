@@ -1,0 +1,1428 @@
+/*------------------------------
+Template Name: Personal Portfolio Template
+Author:
+Author Email: sheikhnajmul123@gmail.com
+Version: 1.00
+--------------------------------
+
+--------------------------------
+Table of content
+--------------------------------
+
+1. Common css Style
+2. Preloader Style
+3. Scroll to top button Style
+4. Menubar Style
+5. Banner Style
+6. About Style
+7. Service Style
+8. Portfolio Style
+9. Skill Style
+10. Testimonial Style
+11. Contact Style
+12. Responsive Style
+
+-------------------------------*/
+
+/*------------------------------
+1. Common css Style
+-------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.clr {
+    clear: both;
+}
+
+button:focus {
+    outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+a {
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+
+.menu-button {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 99999;
+}
+
+.menu-button button {
+    background: #131313;
+    border: 1px solid #fff;
+    padding: 5px;
+}
+
+.menu-button img {
+    width: 25px;
+}
+
+.menu {
+    width: 20%;
+    background: #131313;
+    position: fixed;
+    padding: 30px;
+    height: 100vh;
+    border-right: 1px solid #b3995f;
+    box-sizing: border-box;
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    transition: all linear 0.4s;
+}
+
+.main {
+    width: 80%;
+    float: right;
+}
+
+.title {
+    margin-bottom: 50px;
+}
+
+.title span {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #b3995f;
+    position: relative;
+}
+
+.title span:before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 20px;
+    background: #b3995f;
+    top: 7px;
+    left: -30px;
+}
+
+.title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #fff;
+    margin-top: 15px;
+}
+
+/*------------------------------
+2. Preloader Style
+-------------------------------*/
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #000 url(../images/preloader.gif) no-repeat center center;
+}
+
+/*------------------------------
+3. Scroll to top button Style
+-------------------------------*/
+.top_to {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #b3995f;
+    text-align: center;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 99999;
+    font-size: 24px;
+    color: #fff;
+    line-height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/*------------------------------
+ 4. Menubar Style
+-------------------------------*/
+header #menubar .brand-img img {
+    width: 150px;
+}
+
+header #menubar .navbar {
+    margin-top: 50px;
+}
+
+header #menubar .navbar .navs {
+    width: 100%;
+}
+
+header #menubar .navbar .navbar-nav .nav-item {
+    border-bottom: 1px solid #444;
+    text-align: left;
+}
+
+header #menubar .navbar .navbar-nav .nav-item .nav-link {
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    line-height: 50px;
+    position: relative;
+}
+
+header #menubar .navbar .navbar-nav .nav-item .nav-link:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 20px;
+    background: #b3995f;
+    top: 23px;
+    left: 0;
+    opacity: 0;
+}
+
+header #menubar .navbar .navbar-nav .nav-item:hover .nav-link {
+    padding-left: 30px;
+    color: #b3995f;
+}
+
+header #menubar .navbar .navbar-nav .nav-item:hover .nav-link:after {
+    opacity: 1;
+}
+
+header #menubar .navbar .navbar-nav .nav-item .nav-link.active {
+    color: #b3995f;
+    padding-left: 30px;
+}
+
+header #menubar .navbar .navbar-nav .nav-item .nav-link.active:after {
+    opacity: 1;
+}
+
+header #menubar .social {
+    margin-top: 50px;
+}
+
+header #menubar .social li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+header #menubar .social li a i {
+    height: 40px;
+    width: 40px;
+    background: #444;
+    color: #999;
+    line-height: 40px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 18px;
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    transition: all linear 0.4s;
+}
+
+header #menubar .social li a:hover i {
+    background: #222;
+    color: #fff;
+}
+
+header #menubar .copy {
+    margin-top: 50px;
+}
+
+header #menubar .copy p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+}
+
+/*------------------------------
+ 5. Banner Style
+-------------------------------*/
+#banner .item1 {
+    background: url(../images/banner1.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#banner .item2 {
+    background: url(../images/banner.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#banner .banner-slide .banner-overlay {
+    background: rgba(19, 19, 19, 0.6);
+    padding: 200px 0;
+}
+
+#banner .banner-slide .banner-item h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+#banner .banner-slide .banner-item h1 span {
+    color: #b3995f;
+}
+
+#banner .banner-slide .banner-item .designation {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+#banner .banner-slide .banner-item p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 28px;
+}
+
+#banner .banner-slide .banner-item .button {
+    display: flex;
+    margin-top: 30px;
+}
+
+#banner .banner-slide .banner-item.item2 .button {
+    justify-content: center;
+}
+
+#banner .banner-slide .banner-item .button li {
+    margin: 0 5px;
+}
+
+#banner .banner-slide .banner-item .button li a {
+    display: inline-block;
+    line-height: 50px;
+    background: #444;
+    color: #fff;
+    padding: 0 20px;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+#banner .banner-slide .banner-item .button li a:hover {
+    background: #222;
+}
+
+#banner .leftbtn,
+#banner .rightbtn {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 50px;
+    width: 50px;
+    font-size: 14px;
+    color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #444;
+    text-align: center;
+    line-height: 50px;
+    z-index: 99;
+    cursor: pointer;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+    opacity: 0;
+}
+
+#banner .leftbtn {
+    left: 20px;
+}
+
+#banner .rightbtn {
+    right: 20px;
+}
+
+#banner .leftbtn:hover,
+#banner .rightbtn:hover {
+    background: #444;
+}
+
+#banner .banner-slide:hover .leftbtn,
+#banner .banner-slide:hover .rightbtn {
+    opacity: 1;
+}
+
+/*------------------------------
+ 6. About Style
+-------------------------------*/
+#about {
+    padding: 80px 0;
+    background: #131313;
+    border-top: 1px solid #b3995f;
+}
+
+#about .about-img {
+    position: relative;
+    z-index: 0;
+}
+
+#about .about-img img {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px -1px #a0a0a0;
+}
+
+#about .about-img:before {
+    height: 100%;
+    width: 100%;
+    border: 2px solid #b3995f;
+    top: -25px;
+    left: 25px;
+    position: absolute;
+    content: '';
+    z-index: -1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#about .about-text h3 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+}
+
+#about .about-text h3 span {
+    color: #b3995f;
+}
+
+#about .about-text .sub-text {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+#about .about-text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    line-height: 24px;
+}
+
+#about .pro-bar-container {
+    height: 5px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    background: #444;
+    overflow: visible;
+    width: 70%;
+    float: right;
+    margin-right: 10%;
+}
+
+#about .pro-bar {
+    width: 0%;
+    height: 5px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    background: #b3995f;
+}
+
+#about .working {
+    margin-top: 30px;
+}
+
+#about .working .items .text {
+    position: relative;
+}
+
+#about .working .items .text h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    position: absolute;
+    top: -15px;
+    left: -25%;
+}
+
+#about .working .items .text p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    position: absolute;
+    top: -15px;
+    right: -8%;
+}
+
+/*------------------------------
+ 7. Service Style
+-------------------------------*/
+#service {
+    padding: 80px 0;
+    background: #131313;
+    border-top: 1px solid #b3995f;
+}
+
+#service .service-item {
+    height: 250px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+}
+
+
+#service .service-item .service-icon {
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    transition: all linear 0.4s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    flex-direction: column;
+    display: block;
+    background: #222;
+    border: 1px solid #b3995f;
+}
+
+#service .service-item img {
+    width: 50px;
+}
+
+#service .service-item .service-icon img {
+    margin-top: 20%;
+}
+
+#service .service-item .service-icon h4 {
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 30px;
+    position: relative;
+}
+
+#service .service-item .service-icon h4:after {
+    bottom: -15px;
+    position: absolute;
+    height: 1px;
+    width: 30px;
+    background: #b3995f;
+    content: '';
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#service .service-item:hover .service-icon {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+#service .service-item .service-text {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    transition: all linear 0.4s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    display: block;
+}
+
+#service .service-item .service-text h4 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-size: 22px;
+    color: #222;
+    font-weight: 700;
+}
+
+#service .service-item .service-text p {
+    color: #444;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#service .service-item .service-text p:after {
+    bottom: -15px;
+    position: absolute;
+    height: 1px;
+    width: 30px;
+    background: #b3995f;
+    content: '';
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#service .service-item:hover .service-text {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+/*------------------------------
+ 8. Portfolio Style
+-------------------------------*/
+#portfolio {
+    padding: 80px 0;
+    background: #131313;
+    border-top: 1px solid #b3995f;
+}
+
+#portfolio .p-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#portfolio .p-menu li {
+    text-transform: capitalize;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 0 1px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#portfolio .p-menu li:hover {
+    background: #b3995f;
+}
+
+#portfolio .p-menu li.active {
+    background: #b3995f;
+}
+
+#portfolio .p-item {
+    margin: 15px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#portfolio .p-item .p-image img {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+    -webkit-filter: brightness(1) blur(0px);
+    -moz-filter: brightness(1) blur(0px);
+    -ms-filter: brightness(1) blur(0px);
+    -o-filter: brightness(1) blur(0px);
+    filter: brightness(1) blur(0px);
+    display: block;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+
+
+#portfolio .p-item:hover img {
+    -webkit-transform: translateY(-60px);
+    -moz-transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    -o-transform: translateY(-60px);
+    transform: translateY(-60px);
+    -webkit-filter: brightness(0.8) blur(3px);
+    -moz-filter: brightness(0.8) blur(3px);
+    -ms-filter: brightness(0.8) blur(3px);
+    -o-filter: brightness(0.8) blur(3px);
+    filter: brightness(0.8) blur(3px);
+}
+
+#portfolio .p-item .p-overlay {
+    padding: 20px 30px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #222;
+    width: 100%;
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+
+#portfolio .p-item .p-overlay i {
+    position: absolute;
+    right: -100px;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+    color: #b3995f;
+}
+
+#portfolio .p-item .p-overlay i:hover {
+    background: #b3995f;
+    color: #fff;
+}
+
+#portfolio .p-item .p-overlay:hover i {
+    right: 0;
+}
+
+#portfolio .p-item .p-overlay .p-text p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+#portfolio .p-item:hover .p-overlay {
+    transform: translateY(-100%);
+}
+
+/*------------------------------
+ 9. Skill Style
+-------------------------------*/
+#skill {
+    padding: 80px 0;
+    background: #131313;
+    border-top: 1px solid #b3995f;
+}
+
+#skill .skillbar h3 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+#skill .skillbar .circle .chart {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 150px;
+}
+
+#skill .skillbar .circle .chart .percent {
+    color: #b3995f;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+#skill .skillbar .circle canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*------------------------------
+ 10. Testimonial Style
+-------------------------------*/
+#testimonial {
+    padding: 80px 0;
+    background: #131313;
+    border-top: 1px solid #b3995f;
+}
+
+#testimonial .testimonial-slide .client {
+    background: #222;
+    padding: 30px;
+}
+
+#testimonial .testimonial-slide .client .client_img img {
+    width: 20%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: 3px dotted #b3995f;
+    padding: 10px;
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#testimonial .testimonial-slide .client .client_name h4 {
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 26px;
+    padding-top: 15px;
+}
+
+#testimonial .testimonial-slide .client .client_name span {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #b3995f;
+    text-transform: capitalize;
+}
+
+#testimonial .testimonial-slide .client p {
+    color: #9b9a9c;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 0;
+    position: relative;
+}
+
+#testimonial .testimonial-slide .client p:before {
+    content: '\f10d';
+    font-family: 'FontAwesome';
+    position: absolute;
+    color: #999;
+    top: -33px;
+    left: -23px;
+    font-size: 30px;
+    opacity: .1;
+}
+
+#testimonial .testimonial-slide .client p:after {
+    content: '\f10e';
+    font-family: 'FontAwesome';
+    position: absolute;
+    color: #999;
+    top: 40px;
+    right: -20px;
+    font-size: 30px;
+    opacity: .1;
+}
+
+#testimonial .testimonial_slide {
+    position: relative;
+}
+
+#testimonial .testimonial-slide .slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#testimonial .testimonial-slide .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+#testimonial .testimonial-slide .slick-dots li button {
+    font-size: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 0;
+    background: #b3995f;
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    transition: all linear 0.4s;
+}
+
+#testimonial .testimonial-slide .slick-dots li.slick-active button {
+    width: 25px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+}
+
+/*------------------------------
+ 11. Contact Style
+-------------------------------*/
+#contact {
+    padding: 80px 0;
+    background: #131313;
+    border-top: 1px solid #b3995f;
+}
+
+#contact h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+#contact p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+#contact .address li {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 42px;
+    color: #999;
+}
+
+#contact .address li span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+#contact .c-form .input-field {
+    padding: 10px 15px;
+    background: #222;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    margin-bottom: 15px;
+}
+
+#contact .c-form .input-field::placeholder {
+    color: #999;
+    text-transform: capitalize;
+}
+
+#contact .c-form textarea {
+    resize: none;
+}
+
+#contact .c-form .send-btn {
+    background: #444;
+    color: #999;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+    border: 0;
+    -webkit-transition: all linear 0.4s;
+    -moz-transition: all linear 0.4s;
+    -ms-transition: all linear 0.4s;
+    -o-transition: all linear 0.4s;
+    transition: all linear 0.4s;
+}
+
+#contact .c-form .send-btn:hover {
+    background: #222;
+    color: #fff;
+}
+
+/*------------------------------
+ 12. Footer Style
+-------------------------------*/
+footer {
+    padding: 20px 0;
+    background: #131313;
+    border-top: 1px solid #b3995f;
+}
+
+footer p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    text-transform: capitalize;
+}
+
+/*------------------------------
+ 13. Responsive Style
+-------------------------------*/
+/* extra large device */
+@media(min-width: 1200px) {
+    #about .a-big {
+        display: none;
+    }
+
+    #about .a-small {
+        display: block;
+    }
+}
+
+/* large device */
+@media(min-width: 992px) and (max-width: 1199px) {
+    .menu {
+        width: 30%;
+        overflow-y: scroll;
+    }
+
+    .main {
+        width: 70%;
+    }
+
+    #about .a-big {
+        display: block;
+    }
+
+    #about .a-small {
+        display: none;
+    }
+
+    #about .about-img {
+        width: 60%;
+        margin: 30px 0;
+    }
+
+    #about .pro-bar-container {
+        width: 65%;
+    }
+
+    #about .working .items .text h4 {
+        left: -35%;
+    }
+}
+
+/* medium device */
+@media(min-width: 768px) and (max-width: 991px) {
+    .menu {
+        width: 30%;
+        overflow-y: scroll;
+    }
+
+    .main {
+        width: 70%;
+    }
+
+    header #menubar .social li {
+        margin: 5px 0;
+    }
+
+    #banner .banner-slide .banner-overlay {
+        padding: 100px 0;
+    }
+
+    #banner .banner-slide .banner-item h1 {
+        font-size: 50px;
+    }
+
+    #about {
+        padding: 60px 0;
+    }
+
+    #about .a-big {
+        display: block;
+    }
+
+    #about .a-small {
+        display: none;
+    }
+
+    #about .about-img {
+        width: 60%;
+        margin: 30px 0;
+    }
+
+    #about .pro-bar-container {
+        width: 60%;
+    }
+
+    #about .working .items .text h4 {
+        left: -45%;
+    }
+
+    #about .working .items .text p {
+        right: -40px;
+    }
+
+    #service {
+        padding: 60px 0;
+    }
+
+    #service .service-item .service-text {
+        padding: 15px;
+    }
+
+    #portfolio {
+        padding: 60px 0;
+    }
+
+    #portfolio .p-item .p-overlay i {
+        width: 60px;
+    }
+
+    #skill {
+        padding: 60px 0;
+    }
+
+    #skill .skillbar {
+        margin-bottom: 30px;
+    }
+
+    #testimonial {
+        padding: 60px 0;
+    }
+
+    #contact {
+        padding: 60px 0;
+    }
+
+    #contact .c-form {
+        margin-top: 30px;
+    }
+}
+
+/* small device */
+@media(min-width: 576px) and (max-width: 767px) {
+    .menu-button {
+        display: block;
+    }
+
+    .menu {
+        width: 250px;
+        transform: translateX(-250px);
+        z-index: 999;
+        position: fixed;
+        overflow-y: scroll;
+        padding: 20px;
+    }
+
+    .menu.view {
+        transform: translateX(0);
+    }
+
+    .main {
+        width: 100%;
+        float: left;
+    }
+
+    header #menubar .social li {
+        margin: 5px 0;
+    }
+
+    #banner .banner-slide .banner-overlay {
+        padding: 100px 0;
+    }
+
+    #banner .banner-slide .banner-item h1 {
+        font-size: 50px;
+    }
+
+    #about {
+        padding: 50px 0;
+    }
+
+    #about .a-big {
+        display: block;
+    }
+
+    #about .a-small {
+        display: none;
+    }
+
+    #about .about-img {
+        width: 60%;
+        margin: 30px 0;
+    }
+
+    #about .pro-bar-container {
+        width: 60%;
+    }
+
+    #about .working .items .text h4 {
+        left: -45%;
+    }
+
+    #about .working .items .text p {
+        right: -50px;
+    }
+
+    #service {
+        padding: 50px 0;
+    }
+
+    #service .service-item .service-text {
+        padding: 15px;
+    }
+
+    #portfolio {
+        padding: 50px 0;
+    }
+
+    #portfolio .p-item .p-overlay i {
+        width: 60px;
+    }
+
+    #skill {
+        padding: 50px 0;
+    }
+
+    #skill .skillbar {
+        margin-bottom: 30px;
+    }
+
+    #testimonial {
+        padding: 50px 0;
+    }
+
+    #contact {
+        padding: 50px 0;
+    }
+
+    #contact .c-form {
+        margin-top: 30px;
+    }
+}
+
+/* extra small device */
+@media(min-width: 320px) and (max-width: 575px) {
+    .menu-button {
+        display: block;
+    }
+
+    .menu {
+        width: 200px;
+        padding: 10px;
+        transform: translateX(-200px);
+        z-index: 999;
+        position: fixed;
+        overflow-y: scroll;
+    }
+
+    .menu.view {
+        transform: translateX(0);
+    }
+
+    .main {
+        width: 100%;
+        float: left;
+    }
+
+    header #menubar .social li {
+        margin: 5px 0;
+    }
+
+    #banner .banner-slide .banner-overlay {
+        padding: 100px 0;
+    }
+
+    #banner .banner-slide .banner-item h1 {
+        font-size: 40px;
+    }
+
+    #banner .banner-slide .banner-item .designation {
+        font-size: 25px;
+        padding: 15px 0;
+    }
+
+    #about {
+        padding: 50px 0;
+    }
+
+    #about .a-big {
+        display: block;
+    }
+
+    #about .a-small {
+        display: none;
+    }
+
+    #about .about-img {
+        width: 90%;
+        margin: 30px 0;
+    }
+
+    #about .pro-bar-container {
+        width: 90%;
+    }
+
+    #about .working .items .text h4 {
+        left: 0;
+        top: -30px;
+    }
+
+    #about .working .items .text p {
+        right: 0;
+        top: -30px;
+    }
+
+    #service {
+        padding: 50px 0;
+    }
+
+    #service .service-item .service-text {
+        padding: 15px;
+    }
+
+    #portfolio {
+        padding: 50px 0;
+    }
+
+    #portfolio .p-menu {
+        display: block;
+    }
+
+    #portfolio .p-item .p-overlay i {
+        width: 60px;
+    }
+
+    #skill {
+        padding: 50px 0;
+    }
+
+    #skill .skillbar {
+        margin-bottom: 30px;
+    }
+
+    #testimonial {
+        padding: 50px 0;
+    }
+
+    #contact {
+        padding: 50px 0;
+    }
+
+    #contact .c-form {
+        margin-top: 30px;
+    }
+}
